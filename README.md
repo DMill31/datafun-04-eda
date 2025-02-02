@@ -57,3 +57,29 @@ Lastly, we will select our VS Code Interpreter
 Now your project is ready and the real fun can begin
 
 Don't forget to regularly Git add-commit-push to keep everything up to date
+
+## Workflow for this Jupyter Notebook
+
+# Step 1
+
+1. Add a Title using Markdown
+2. Create a header with the author name, purpose, and date
+3. Create a numbered list for imports 
+4. Create a Python cell for the import statements
+
+# Step 2
+
+Load data into a pandas Dataframe
+
+Example:
+
+```shell
+# Load the Iris dataset into pandas DataFrame
+iris_df: pd.DataFrame = sns.load_dataset('iris')
+
+# List column names
+iris_df.columns
+
+# Inspect first few rows of the DataFrame
+iris_df.head()
+```
