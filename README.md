@@ -60,14 +60,14 @@ Don't forget to regularly Git add-commit-push to keep everything up to date
 
 ## Workflow for this Jupyter Notebook
 
-# Step 1
+### Step 1
 
 1. Add a Title using Markdown
 2. Create a header with the author name, purpose, and date
 3. Create a numbered list for imports 
 4. Create a Python cell for the import statements
 
-# Step 2
+### Step 2
 
 Load data into a pandas Dataframe
 
