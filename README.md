@@ -83,3 +83,58 @@ iris_df.columns
 # Inspect first few rows of the DataFrame
 iris_df.head()
 ```
+
+### Step 3
+
+Initial Data Inspection
+
+After loading the data, it's important to know what we're working with, so we take an initial look at our DataFrame.
+
+Example:
+
+```shell
+# Specify the number of rows to display
+iris_df.head(10)
+
+# Inspect the shape of the DataFrame with shape attribute
+# The shape is a tuple with count of rows and columns in the DataFrame
+iris_df.shape
+
+# Inspect the data types of the columns with dtypes attribute
+# The data types are returned as a pandas Series
+iris_df.dtypes
+
+# Inspect the data types of the columns with info() method
+iris_df.info()
+```
+
+### Step 4
+
+Initial Descriptive Statistics
+
+We now look at the summary statistics by using the DataFrame describe() method.
+
+Example:
+
+```shell
+# Inspect summary statistics for numerical columns
+iris_df.describe()
+```
+
+### Step 5 Part 1
+
+Initial Data Distribution for Numerical Columns
+
+We will show some histograms made by using the hist() method.
+
+Example:
+```shell
+# Inspect histogram by one numerical column
+iris_df['sepal_length'].hist()
+
+# Inspect histograms for ALL numerical columns
+iris_df.hist()
+
+# Show all plots
+matplotlib.pyplot.show()
+```
