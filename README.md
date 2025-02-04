@@ -138,3 +138,50 @@ iris_df.hist()
 # Show all plots
 matplotlib.pyplot.show()
 ```
+
+### Step 5 Part 2
+
+Initial Data Distribution for Categorical Columns
+
+Now we'll show another histogram, but due to the column being categorical, hist() cannot be used.
+
+We'll instead use the value_counts() method followed by a for loop to create this histogram.
+
+Example:
+```shell
+# Inspect value counts by categorical column
+# Column name must be EXACT.
+# The value_counts() method is only available for Series objects.
+# The value_counts() method returns a pandas Series with the counts of unique values in the column.
+iris_df['species'].value_counts()
+
+# Inspect value counts for ALL categorical columns
+for col in iris_df.select_dtypes(include=['object', 'category']).columns:
+    # Display count plot
+    sns.countplot(x=col, data=iris_df)
+    matplotlib.pyplot.title(f'Distribution of {col}')
+    matplotlib.pyplot.show()
+
+# Show all plots
+matplotlib.pyplot.show()
+```
+
+### Step 6
+
+Initial Data Transformation and Feature Engineering
+
+Now it's time to clean and transform the data.
+
+ - Cleaning the data makes sure that the data is consistent and full of quality.
+ - Transforming the data preps it for our analysis.
+
+Example:
+```shell
+# Feature Engineering
+# Renaming a column
+iris_df.rename(columns={'sepal_length': 'Sepal Length'}, inplace=True)
+
+# Adding a new column
+iris_df['Sepal Area'] = iris_df['Sepal Length'] * iris_df['sepal_width']
+```
+
