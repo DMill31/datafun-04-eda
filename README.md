@@ -185,3 +185,41 @@ iris_df.rename(columns={'sepal_length': 'Sepal Length'}, inplace=True)
 iris_df['Sepal Area'] = iris_df['Sepal Length'] * iris_df['sepal_width']
 ```
 
+### Step 7
+
+Initial Visualizations
+
+Here we'll create charts to better present insights from the data.
+
+Example:
+```shell
+# Create a pairplot of the Iris dataset
+# A pairplot is a grid of scatter plots for each pair of numerical columns in the dataset
+# The hue parameter is used to color the data points 
+# by species (a categorical column)
+sns.pairplot(iris_df, hue='species')
+
+# Show all plots
+matplotlib.pyplot.show()
+```
+
+Example for a scatterplot:
+```shell
+# A scatter plot is a plot of two numerical variables.
+scatter_plt: Axes = sns.scatterplot(
+    data=iris_df, x="Sepal Length", y="Sepal Area", hue="species"
+)
+
+# Set axis labels using the Matplotlib Axes methods set_xlabel() and set_ylabel()
+scatter_plt.set_xlabel("Sepal Length (mm)")
+scatter_plt.set_ylabel("Sepal Area (mm squared)")   
+
+# Set the title using the Matplotlib Axes set_title() method
+scatter_plt.set_title("Chart 1. Iris Sepal Length vs. Sepal Area (by Species)")
+
+matplotlib.pyplot.show()
+```
+
+### Step 8
+
+Initial Insights
