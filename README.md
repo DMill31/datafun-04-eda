@@ -223,3 +223,9 @@ matplotlib.pyplot.show()
 ### Step 8
 
 Initial Insights
+
+Now it's time to share what you've learned from the data.  Summarize your insights based on what you discovered during your exploratory data analysis.
+
+### Step 9
+
+The final step would be to look over your notebook and annotate anything that needs annotating to convey the story that you're trying to tell with the data you have.  Your findings should be presented in a logical and engaging manner, while making it easy to digest for anyone, regardless of technical background.
